@@ -3,6 +3,10 @@
 ## About InvoiceMS
 A website for the purpose of invoice management, following up customers with their invoice and electronic payment
 
+## Features
+- Multi Languages (English, French and Arabic)
+- dark mode
+
 ## Roles
   
 ### customers

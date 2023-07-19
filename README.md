@@ -9,7 +9,7 @@ A website for the purpose of invoice management, following up customers with the
 
 ## Roles
   
-### customers
+### Customers
 - View profile
 - View all paid and unpaid invoice and archives
 - Online payment of invoice
@@ -32,7 +32,7 @@ View bills belonging to his unit
 ## Screenshots
 ### Login page
 ```bash
-# Screenshot is currently not available 
+# Screenshot Login page is currently not available 
 ```
 ### Customer Dashboard Page
 ```bash
@@ -80,7 +80,7 @@ View bills belonging to his unit
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/MedjadjiAbdelkadir/InternFinderV1.git
+$ git clone https://github.com/MedjadjiAbdelkadir/InvoiceMS.git
 # Go to the project directory
 $ cd InvoiceMS
 # Create file .env

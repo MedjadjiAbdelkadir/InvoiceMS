@@ -54,7 +54,7 @@ View bills belonging to his unit
 
 
 ## Project Structure 
-├─ `app` \
+┌─ `app` \
 ├─ `bootstrap` \
 ├─ `config` \
 ├─ `database` \

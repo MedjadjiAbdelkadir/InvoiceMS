@@ -26,7 +26,7 @@ View bills belonging to his unit
 - Sending and receiving the unit administrator report
 - Follow-up of the invoices payment process
 - Sending automatic reminders to late payment recipients (according to a date mentioned in the invoice)
-- 
+
 ### Admins
 - Administrators often have the authority to administer the site
 ## Screenshots

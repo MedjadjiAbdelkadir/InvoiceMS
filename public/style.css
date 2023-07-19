@@ -1,0 +1,19 @@
+.toggleThemeBtn > div > i {
+    margin-right: 5px;
+  }
+  
+  .toggleThemeBtn #darkThemeBtn {
+    display:none;
+  }
+  
+  body.dark #lightThemeBtn {
+    display: none;
+  }
+  
+  body.dark #darkThemeBtn {
+    display: block;
+  }
+  
+  .toggleThemeBtn > div {
+    padding: 10px 20px;
+  }

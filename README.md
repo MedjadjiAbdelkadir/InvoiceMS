@@ -17,7 +17,7 @@ A website for the purpose of invoice management, following up customers with the
 - Submit a report about the meter in case of a technical problem
 
 ### Unit Manager
-View the branches and activities of branch officials affiliated with the subsidiary unit
+- View the branches and activities of branch officials affiliated with the subsidiary unit
 - Sending and receiving reports to branch and administrator officials
 View bills belonging to his unit
 

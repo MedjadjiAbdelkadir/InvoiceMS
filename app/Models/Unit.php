@@ -2,26 +2,25 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Branch;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-use App\Models\Municipal;
-
-class State extends Model{
+class Unit extends Model
+{
     use HasFactory;
     use SoftDeletes;
 
     protected $fillable = [
-        'code',
         'name',
         'ar_name',
+        'responsible_id'
     ];
 
     /* ------------------------ Start Relations ------------------------ */
-    public function municipals() {
-        return $this->hasMany(Municipal::class, 'state_id' , 'id'); 
+     public function branches() {
+        return $this->hasMany(Branch::class, 'unit_id' , 'id'); 
     }
     /* ------------------------ Start Relations ------------------------ */
-
 }

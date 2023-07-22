@@ -2,26 +2,27 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Unit;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-use App\Models\Municipal;
-
-class State extends Model{
+class UnitManager extends Authenticatable
+{
     use HasFactory;
     use SoftDeletes;
 
     protected $fillable = [
-        'code',
         'name',
-        'ar_name',
+        'email',
+        'password',
+        'gender',
     ];
 
     /* ------------------------ Start Relations ------------------------ */
-    public function municipals() {
-        return $this->hasMany(Municipal::class, 'state_id' , 'id'); 
+    public function manager() {
+        return $this->hasMany(Unit::class, 'responsible_id' , 'id'); 
     }
     /* ------------------------ Start Relations ------------------------ */
-
 }

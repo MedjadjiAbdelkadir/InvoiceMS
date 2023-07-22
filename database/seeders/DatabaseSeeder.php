@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         $this->call([
-            StateTableSeeder::class,
-            MunicipalTableSeeder::class,
+            // StateTableSeeder::class,
+            // MunicipalTableSeeder::class,
         ]);
     }
 }

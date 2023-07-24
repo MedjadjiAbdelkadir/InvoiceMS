@@ -2,31 +2,30 @@
 
 namespace App\Models;
 
+use App\Models\Region;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Client extends Authenticatable
+class RegionManager extends Authenticatable
 {
     use HasFactory;
     use SoftDeletes;
 
     protected $fillable = [
-        'region_id',
-        'code',
         'name',
         'email',
-        'phone',
         'password',
+        'phone',
         'gender',
-        'address',
-        'status'
+        'region_id'
     ];
 
     /* ------------------------ Start Relations ------------------------ */
-    // public function subscriber() {
-    //     return $this->belongsTo(Branch::class, 'branch_id' , 'id'); 
-    // }
-    /* ------------------------ Start Relations ------------------------ */
+    public function manager() {
+        return $this->hasOne(Region::class, 'region_id' , 'id'); 
+    }
+    /* ------------------------ End Relations ------------------------ */
+
 }

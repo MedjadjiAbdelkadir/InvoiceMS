@@ -6,9 +6,12 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\UnitTableSeeder;
 use Database\Seeders\StateTableSeeder;
 use Database\Seeders\BranchTableSeeder;
+use Database\Seeders\ClientTableSeeder;
+use Database\Seeders\RegionTableSeeder;
 use Database\Seeders\MunicipalTableSeeder;
 use Database\Seeders\UnitManagerTableSeeder;
 use Database\Seeders\BranchManagerTableSeeder;
+use Database\Seeders\RegionManagerTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -31,6 +34,10 @@ class DatabaseSeeder extends Seeder
             UnitManagerTableSeeder::class,
             BranchManagerTableSeeder::class,
 
+            RegionTableSeeder::class,
+            RegionManagerTableSeeder::class,
+
+            ClientTableSeeder::class,
         ]);
     }
 }

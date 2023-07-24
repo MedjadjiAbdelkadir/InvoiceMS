@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Unit;
 use App\Models\Client;
+use App\Models\Region;
 use App\Models\Municipal;
 use App\Models\BranchManager;
 use Illuminate\Database\Eloquent\Model;
@@ -34,6 +35,11 @@ class Branch extends Model
     public function manager() {
         return $this->hasOne(BranchManager::class, 'branch_id' , 'id'); 
     }
+
+    public function regions() {
+        return $this->hasOne(Region::class, 'branch_id' , 'id'); 
+    }
+
     public function unit() {
         return $this->belongsTo(Unit::class, 'unit_id' , 'id'); 
     }
@@ -42,9 +48,9 @@ class Branch extends Model
         return $this->belongsTo(Municipal::class, 'municipal_id' , 'id'); 
     }
 
-    public function clients() {
-        return $this->hasMany(Client::class, 'branch_id' , 'id'); 
-    }
+    // public function clients() {
+    //     return $this->hasMany(Client::class, 'branch_id' , 'id'); 
+    // }
     /* ------------------------ Start Relations ------------------------ */
     
 }

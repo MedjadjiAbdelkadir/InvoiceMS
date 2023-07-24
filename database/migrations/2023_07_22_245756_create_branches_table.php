@@ -20,6 +20,10 @@ class CreateBranchesTable extends Migration
             $table->foreignId('unit_id')->references('id')->on('units')->onDelete('cascade'); 
             $table->foreignId('responsible_id')->references('id')->on('branch_managers')->onDelete('cascade'); 
 
+            $table->json('phone')->nullable();
+            $table->string('support_email')->unique()->nullable();
+            $table->string('info_email')->unique()->nullable();
+            
             $table->softDeletes();
             $table->timestamps();
         });

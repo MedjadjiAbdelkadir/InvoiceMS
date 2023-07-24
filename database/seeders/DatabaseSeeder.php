@@ -3,8 +3,12 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\UnitTableSeeder;
 use Database\Seeders\StateTableSeeder;
+use Database\Seeders\BranchTableSeeder;
 use Database\Seeders\MunicipalTableSeeder;
+use Database\Seeders\UnitManagerTableSeeder;
+use Database\Seeders\BranchManagerTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,8 +22,14 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         $this->call([
-            // StateTableSeeder::class,
-            // MunicipalTableSeeder::class,
+            StateTableSeeder::class,
+            MunicipalTableSeeder::class,
+           
+            UnitManagerTableSeeder::class,
+            BranchManagerTableSeeder::class,
+
+            UnitTableSeeder::class,
+            BranchTableSeeder::class,
         ]);
     }
 }

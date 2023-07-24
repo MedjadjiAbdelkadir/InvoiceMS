@@ -1,7 +1,16 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Models\State;
+use App\Models\Branch;
+use App\Models\Municipal;
+use App\Models\UnitManager;
+use Faker\Factory as Faker;
+use Illuminate\Support\Str;
 
+use App\Models\BranchManager;
+use App\Models\Unit;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,8 +37,6 @@ Route::group(
     });
 
     Route::get('/', function () {
-        // return 'Home Page : ' . App::getLocale();
-       return config('session.lifetime'); 
         
     });
 

@@ -18,11 +18,12 @@ class BranchManager extends Authenticatable
         'email',
         'password',
         'gender',
+        'branch_id'
     ];
 
     /* ------------------------ Start Relations ------------------------ */
-    public function manager() {
-        return $this->hasMany(Branch::class, 'responsible_id' , 'id'); 
+    public function branch() {
+        return $this->hasOne(Branch::class, 'unit_id' , 'id'); 
     }
     /* ------------------------ Start Relations ------------------------ */
 }

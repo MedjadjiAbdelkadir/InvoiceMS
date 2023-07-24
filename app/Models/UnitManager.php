@@ -18,11 +18,13 @@ class UnitManager extends Authenticatable
         'email',
         'password',
         'gender',
+        'unit_id'
     ];
 
     /* ------------------------ Start Relations ------------------------ */
     public function manager() {
-        return $this->hasMany(Unit::class, 'responsible_id' , 'id'); 
+        return $this->hasOne(Unit::class, 'unit_id' , 'id'); 
     }
     /* ------------------------ Start Relations ------------------------ */
+
 }

@@ -17,11 +17,10 @@ class CreateUnitsTable extends Migration
             $table->id();
 
             $table->foreignId('state_id')->references('id')->on('states')->onDelete('cascade'); 
-            $table->foreignId('responsible_id')->references('id')->on('unit_managers')->onDelete('cascade'); 
             
-            $table->json('phone')->nullable();
             $table->string('support_email')->unique()->nullable();
             $table->string('info_email')->unique()->nullable();
+            $table->json('phone')->nullable();
             $table->string('bank_account')->unique()->nullable();
 
             $table->softDeletes();

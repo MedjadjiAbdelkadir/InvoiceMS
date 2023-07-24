@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\State;
 use App\Models\Branch;
+use App\Models\UnitManager;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -14,7 +15,6 @@ class Unit extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'responsible_id',
         'state_id',
         'phone',
         'support_email',
@@ -29,7 +29,10 @@ class Unit extends Model
     ];
 
     /* ------------------------ Start Relations ------------------------ */
-     public function branches() {
+    public function manager() {
+        return $this->hasOne(UnitManager::class, 'unit_id' , 'id'); 
+    }
+    public function branches() {
         return $this->hasMany(Branch::class, 'unit_id' , 'id'); 
     }
 

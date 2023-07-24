@@ -2,11 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\Unit;
 use App\Models\State;
 use App\Models\UnitManager;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
+
 class UnitManagerTableSeeder extends Seeder
 {
     /**
@@ -19,12 +21,15 @@ class UnitManagerTableSeeder extends Seeder
 
         $states =State::take(5)->get();
 
-        foreach($states as $state){
+        $units = Unit::get();
+
+        foreach($units as $item => $unit){
             UnitManager::create([
-                'name'   =>$state->name .' Manager',
-                'email'   =>Str::lower('manager@'.str_replace(' ' , '',$state->name).'.com'),
+                'name'   =>$states[$item]->name .' Manager',
+                'email'   =>Str::lower('manager@'.str_replace(' ' , '',$states[$item]->name).'.com'),
                 'password'   =>Hash::make('123456789'),
                 'gender'   =>'1',
+                'unit_id'  =>$unit->id,
             ]);
         }
 

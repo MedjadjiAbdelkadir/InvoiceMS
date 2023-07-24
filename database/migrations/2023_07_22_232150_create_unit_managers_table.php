@@ -20,6 +20,7 @@ class CreateUnitManagersTable extends Migration
             $table->string('password');
             $table->enum('gender',['1','2'])->default(1);
 
+            $table->foreignId('unit_id')->references('id')->on('units')->onDelete('cascade'); 
 
             $table->softDeletes();
             $table->timestamps();

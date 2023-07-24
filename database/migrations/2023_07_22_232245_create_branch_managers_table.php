@@ -20,6 +20,8 @@ class CreateBranchManagersTable extends Migration
             $table->string('password');
             $table->enum('gender',['1','2'])->default(1);
 
+            $table->foreignId('branch_id')->references('id')->on('branches')->onDelete('cascade'); 
+
             $table->softDeletes();
             $table->timestamps();
         });

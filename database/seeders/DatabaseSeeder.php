@@ -25,11 +25,12 @@ class DatabaseSeeder extends Seeder
             StateTableSeeder::class,
             MunicipalTableSeeder::class,
            
+            UnitTableSeeder::class,
+            BranchTableSeeder::class,
+
             UnitManagerTableSeeder::class,
             BranchManagerTableSeeder::class,
 
-            UnitTableSeeder::class,
-            BranchTableSeeder::class,
         ]);
     }
 }

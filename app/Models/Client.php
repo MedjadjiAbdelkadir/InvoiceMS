@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Region;
+use App\Models\Invoice;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -25,8 +27,12 @@ class Client extends Authenticatable
     ];
 
     /* ------------------------ Start Relations ------------------------ */
-    // public function subscriber() {
-    //     return $this->belongsTo(Branch::class, 'branch_id' , 'id'); 
-    // }
-    /* ------------------------ Start Relations ------------------------ */
+    public function invoices() {
+        return $this->hasMany(Invoice::class, 'client_id' , 'id'); 
+    }
+
+    public function subscriber() {
+        return $this->belongsTo(Region::class, 'region_id' , 'id'); 
+    }
+    /* ------------------------ End Relations ------------------------ */
 }

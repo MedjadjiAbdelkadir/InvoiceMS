@@ -1,15 +1,5 @@
 <?php
 
-use App\Models\Unit;
-use App\Models\State;
-use App\Models\Branch;
-use App\Models\Client;
-use App\Models\Municipal;
-use App\Models\UnitManager;
-
-use Faker\Factory as Faker;
-use Illuminate\Support\Str;
-use App\Models\BranchManager;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 /*
@@ -31,20 +21,11 @@ Route::group(
 	'prefix' => LaravelLocalization::setLocale(),
 	'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
 ], function(){ 
-    Route::get('/{page}', function ($page) {
-    return view($page);
 
 
-    });
-
-    Route::get('/', function () {
-        // 
-        $client =  Client::with(['subscriber.located.states','subscriber.unit'])->find(1);
-
-        return $client;
-    });
 
 });
+
 
 
 

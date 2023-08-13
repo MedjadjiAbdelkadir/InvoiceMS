@@ -18,6 +18,8 @@ return [
         'passwords' => 'users',
     ],
 
+
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -40,6 +42,27 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'unit_manager' => [
+            'driver' => 'session',
+            'provider' => 'unit_managers',
+        ],
+        
+        'branch_manager' => [
+            'driver' => 'session',
+            'provider' => 'branch_managers',
+        ],
+
+        'region_manager' => [
+            'driver' => 'session',
+            'provider' => 'region_manages',
+        ],
+
+        'client' => [
+            'driver' => 'session',
+            'provider' => 'clients',
+        ],
+
     ],
 
     /*
@@ -63,6 +86,26 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'clients' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Client::class,
+        ],
+
+        'unit_managers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\UnitManager::class,
+        ],
+
+        'branch_managers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\BranchManager::class,
+        ],
+
+        'region_manages' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\RegionManager::class,
         ],
 
         // 'users' => [

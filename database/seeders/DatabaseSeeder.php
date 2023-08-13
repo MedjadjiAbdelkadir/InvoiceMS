@@ -8,6 +8,7 @@ use Database\Seeders\StateTableSeeder;
 use Database\Seeders\BranchTableSeeder;
 use Database\Seeders\ClientTableSeeder;
 use Database\Seeders\RegionTableSeeder;
+use Database\Seeders\SeasonTableSeeder;
 use Database\Seeders\MunicipalTableSeeder;
 use Database\Seeders\UnitManagerTableSeeder;
 use Database\Seeders\BranchManagerTableSeeder;
@@ -25,19 +26,22 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         $this->call([
-            StateTableSeeder::class,
-            MunicipalTableSeeder::class,
+            // StateTableSeeder::class,
+            // MunicipalTableSeeder::class,
            
-            UnitTableSeeder::class,
-            BranchTableSeeder::class,
+            // UnitTableSeeder::class,
+            // BranchTableSeeder::class,
 
-            UnitManagerTableSeeder::class,
-            BranchManagerTableSeeder::class,
+            // UnitManagerTableSeeder::class,
+            // BranchManagerTableSeeder::class,
 
-            RegionTableSeeder::class,
-            RegionManagerTableSeeder::class,
+            // RegionTableSeeder::class,
+            // RegionManagerTableSeeder::class,
 
-            ClientTableSeeder::class,
+            // ClientTableSeeder::class,
+
+            // SeasonTableSeeder::class,
+            
         ]);
     }
 }

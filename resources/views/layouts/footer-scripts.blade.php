@@ -34,3 +34,5 @@
 
 
 <script src="{{URL::asset('main.js')}}"></script>
+
+@livewireScripts

@@ -39,4 +39,15 @@
 
 @endif
 
+@livewireStyles
 <link href="{{URL::asset('style.css')}}" rel="stylesheet">
+
+
+<style>
+    .box {
+
+    }
+    .box.selected {
+        background-color: lightblue;
+    }
+</style>

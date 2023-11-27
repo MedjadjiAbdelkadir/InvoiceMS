@@ -44,7 +44,7 @@
 				<!-- row -->
 				
 				<div class="row">
-
+					<livewire:counter /> 
 				</div>
 				<!-- row closed -->
 			</div>

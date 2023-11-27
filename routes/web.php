@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 /*
@@ -22,7 +23,22 @@ Route::group(
 	'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
 ], function(){ 
 
+    // Route::get('example' , function(){
+    //     return Hash::make()
+    // });
+    Route::prefix('authentication')->name('auth.')->group(function(){
+        // http://invoicesmanagementsystem/en/authentication/login/administration
+        Route::get('login/administration' ,[ LoginController::class, 'loginForm'])->name('loginForm');
+        Route::post('login/administration/{type}}' ,[ LoginController::class, 'login'])->name('login');
+    
+    });
 
+    // http://invoicesmanagementsystem/en/administration/unit_manager
+    // http://invoicesmanagementsystem/en/administration/branch_manager
+    // http://invoicesmanagementsystem/en/administration/region_manager
+    
+//  invoicesmanagementsystem/en/login/administration
+//  invoicesmanagementsystem/ar/login/administration
 
 });
 

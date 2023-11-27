@@ -19,6 +19,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     public const HOME = '/home';
 
+    public const UnitManagerProfile = '';
+    public const BranchManagerProfile = '';
+    public const RegionManagerProfile = '';
     /**
      * The controller namespace for the application.
      *
